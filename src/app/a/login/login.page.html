@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Usuario</ion-label>
+          <ion-input formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+  </form>
+  <ion-button [routerLink]="['listado']">Ingresar</ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>No tienes Cuenta?<ion-button [routerLink]="['register']">Iniciar Sesion</ion-button></ion-title>
+  </ion-toolbar>
+</ion-footer>

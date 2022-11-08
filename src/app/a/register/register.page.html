@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario">
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input formControlName="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido</ion-label>
+      <ion-input formControlName="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Edad</ion-label>
+      <ion-input formControlName="age" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre de Usuario</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-datetime
+        value="2022-04-21T00:00:00"
+        min="2022-03-01T00:00:00"
+        max="2022-05-31T23:59:59"
+        formControlName="birthdate" type="date"
+      ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Genero</ion-label>
+      <ion-segment formControlName="gender">
+        <ion-segment-button value="masculoino">
+          <ion-label>Masculino</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="femenino">
+          <ion-label>Femenino</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+  </form>
+  <ion-button>Registrarse</ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Ya tienes Cuenta?<ion-button [routerLink]="['/a/login']">Iniciar Sesion</ion-button></ion-title>
+  </ion-toolbar>
+</ion-footer>
